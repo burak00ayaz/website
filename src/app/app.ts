@@ -1,12 +1,18 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-
-@Component({
-  imports: [RouterOutlet],
-  selector: 'app-root',
-  styleUrl: './app.css',
-  templateUrl: './app.html',
-})
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+@Component({ selector: 'app-root', imports: [], templateUrl: './app.html', styleUrl: './app.css' })
 export class App {
-  protected readonly title = signal('website-app');
+  menuOpen = signal(false);
+  activeVideo = signal<string | null>(null);
+  videoUrl: SafeResourceUrl | null = null;
+  constructor(private sanitizer: DomSanitizer) {}
+  playVideo(id: string) {
+    this.videoUrl = this.sanitizer.bypassSecurityTrustResourceUrl(
+      'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1',
+    );
+    this.activeVideo.set(id);
+  }
+  closeMenu() {
+    this.menuOpen.set(false);
+  }
 }
