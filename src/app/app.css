@@ -138,18 +138,18 @@ nav a:hover,
   background: var(--orange);
   color: #fff;
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
-  gap: 32px;
-  white-space: nowrap;
-  overflow: hidden;
-  padding: 19px 0;
-  font-size: 22px;
+  gap: 10px clamp(16px, 3vw, 40px);
+  padding: clamp(14px, 2vw, 19px) clamp(16px, 4vw, 56px);
 }
 .ticker span {
   font-family: Impact, 'Arial Narrow', sans-serif;
-  font-size: 21px;
+  font-size: clamp(14px, 1.8vw, 21px);
+  line-height: 1.4;
   letter-spacing: 1px;
+  white-space: nowrap;
 }
 .section {
   padding: 85px 7%;
