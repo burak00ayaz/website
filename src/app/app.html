@@ -1,13 +1,15 @@
 <a class="skip" href="#music">Skip to music</a>
 <header>
-  <a class="wordmark" href="#" aria-label="Mad Sultan home">MAD SULTAN<span>?</span></a>
+  <a class="wordmark" href="#" aria-label="Mad Sultan home"
+    >MAD SULTAN<span aria-hidden="true">&#10035;</span></a
+  >
   <button
     class="menu-toggle"
     (click)="menuOpen.set(!menuOpen())"
     [attr.aria-expanded]="menuOpen()"
     aria-controls="navigation"
   >
-    {{ menuOpen() ? 'Close ?' : 'Menu +' }}
+    {{ menuOpen() ? 'Close -' : 'Menu +' }}
   </button>
   <nav id="navigation" [class.open]="menuOpen()">
     <a href="#music" (click)="closeMenu()">THE MUSIC</a
@@ -19,7 +21,7 @@
     href="https://www.instagram.com/madsultanband/"
     target="_blank"
     rel="noopener noreferrer"
-    >FOLLOW THE NOISE ?</a
+    >FOLLOW THE NOISE &#8599;</a
   >
 </header>
 <main>
@@ -31,72 +33,32 @@
       <div class="hero-title">
         <h1 id="hero-title">MAD<br /><span>SULTAN</span></h1>
         <p>Somewhere between<br />the roots and the unknown.</p>
-        <a class="button dark" href="#music"><span>?</span> ENTER THE SOUND <span>?</span></a>
+        <a class="button dark" href="#music"
+          ><span aria-hidden="true">&#9654;</span> ENTER THE SOUND
+          <span aria-hidden="true">&#8599;</span></a
+        >
       </div>
-      <div class="sun-art" aria-hidden="true">
-        <svg viewBox="0 0 600 600">
-          <defs>
-            <path id="ray" d="M291 167 Q265 114 292 27 Q302 91 314 116 Q326 145 310 168Z" />
-            <pattern id="grain" width="9" height="9" patternUnits="userSpaceOnUse">
-              <circle cx="2" cy="4" r=".7" fill="#eadfc6" />
-            </pattern>
-          </defs>
-          <g fill="currentColor">
-            <use href="#ray" transform="rotate(0 300 300)" />
-            <use href="#ray" transform="rotate(15 300 300)" />
-            <use href="#ray" transform="rotate(30 300 300)" />
-            <use href="#ray" transform="rotate(45 300 300)" />
-            <use href="#ray" transform="rotate(60 300 300)" />
-            <use href="#ray" transform="rotate(75 300 300)" />
-            <use href="#ray" transform="rotate(90 300 300)" />
-            <use href="#ray" transform="rotate(105 300 300)" />
-            <use href="#ray" transform="rotate(120 300 300)" />
-            <use href="#ray" transform="rotate(135 300 300)" />
-            <use href="#ray" transform="rotate(150 300 300)" />
-            <use href="#ray" transform="rotate(165 300 300)" />
-            <use href="#ray" transform="rotate(180 300 300)" />
-            <use href="#ray" transform="rotate(195 300 300)" />
-            <use href="#ray" transform="rotate(210 300 300)" />
-            <use href="#ray" transform="rotate(225 300 300)" />
-            <use href="#ray" transform="rotate(240 300 300)" />
-            <use href="#ray" transform="rotate(255 300 300)" />
-            <use href="#ray" transform="rotate(270 300 300)" />
-            <use href="#ray" transform="rotate(285 300 300)" />
-            <use href="#ray" transform="rotate(300 300 300)" />
-            <use href="#ray" transform="rotate(315 300 300)" />
-            <use href="#ray" transform="rotate(330 300 300)" />
-            <use href="#ray" transform="rotate(345 300 300)" />
-          </g>
-          <circle cx="300" cy="300" r="143" fill="none" stroke="currentColor" stroke-width="3" />
-          <circle cx="300" cy="300" r="132" fill="none" stroke="currentColor" />
-          <path
-            d="M191 291 Q239 245 277 288 Q234 321 191 291M323 288 Q364 245 409 291 Q366 321 323 288"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="4"
-          />
-          <circle cx="239" cy="286" r="13" fill="currentColor" />
-          <circle cx="362" cy="286" r="13" fill="currentColor" />
-          <path
-            d="M299 282 Q278 326 289 337 L312 337 M261 367 Q300 386 340 365 M271 367 Q301 355 331 367 M288 394 Q301 398 313 393 M203 264 Q239 245 268 266 M332 266 Q366 245 399 264"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="3"
-          />
-          <circle cx="300" cy="300" r="130" fill="url(#grain)" opacity=".35" />
-        </svg>
-        <div class="orbit-label">HEAVY RIFFS ? HYPNOTIC RHYTHMS</div>
-      </div>
+      <figure class="hero-photo">
+        <img
+          src="images/band-pic.jpeg"
+          alt="The six members of Mad Sultan with their instruments on graffiti-covered steps, in an archive gig poster"
+          width="1440"
+          height="1440"
+          fetchpriority="high"
+        />
+        <figcaption>FROM THE ARCHIVE / THE BAND, IN FULL COLOR</figcaption>
+      </figure>
       <div class="hero-side">HARD ROCK / ANATOLIAN / PSYCHEDELIA</div>
     </div>
     <div class="hero-bottom">
       <span><i></i> INDEPENDENT SPIRIT. UNFILTERED SOUND.</span
-      ><a href="#music">SCROLL TO EXPLORE ?</a>
+      ><a href="#music">SCROLL TO EXPLORE &#8595;</a>
     </div>
   </section>
   <div class="ticker" aria-hidden="true">
-    <span>ANATOLIAN ROCK</span> ? <span>PSYCHEDELIC SOUL</span> ? <span>PLAY IT LOUD</span> ?
-    <span>MAD SULTAN</span> ? <span>ANATOLIAN ROCK</span> ?
+    <span>ANATOLIAN ROCK</span> &#10035; <span>PSYCHEDELIC SOUL</span> &#10035;
+    <span>PLAY IT LOUD</span> &#10035; <span>MAD SULTAN</span> &#10035;
+    <span>ANATOLIAN ROCK</span> &#10035;
   </div>
   <section class="music section" id="music">
     <div class="section-heading">
@@ -109,7 +71,7 @@
         href="https://soundcloud.com/mad-sultan-band"
         target="_blank"
         rel="noopener noreferrer"
-        >ALL MUSIC ON SOUNDCLOUD ?</a
+        >ALL MUSIC ON SOUNDCLOUD &#8599;</a
       >
     </div>
     <div class="music-layout">
@@ -134,14 +96,14 @@
           frameborder="no"
           allow="autoplay"
           loading="lazy"
-          src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/1356305229&color=%23b94c2d&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&visual=false"
+          src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/1356305229&color=%23ef4556&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&visual=false"
         ></iframe
         ><a
           class="small-link"
           href="https://soundcloud.com/mad-sultan-band"
           target="_blank"
           rel="noopener noreferrer"
-          >Open in SoundCloud ?</a
+          >Open in SoundCloud &#8599;</a
         >
       </div>
     </div>
@@ -157,8 +119,28 @@
         href="https://www.youtube.com/@madsultanband"
         target="_blank"
         rel="noopener noreferrer"
-        >MORE ON YOUTUBE ?</a
+        >MORE ON YOUTUBE &#8599;</a
       >
+    </div>
+    <article class="featured-film">
+      <div class="film-heading">
+        <span class="eyebrow">UP CLOSE / MAD SULTAN ON FILM</span
+        ><span>PRESS PLAY. TURN IT UP.</span>
+      </div>
+      <video controls playsinline preload="metadata" aria-label="Mad Sultan band video">
+        <source src="videos/video.mp4" type="video/mp4" />
+        Your browser does not support this video.
+        <a href="videos/video.mp4">Download the band video</a>.
+      </video>
+      <div class="video-caption">
+        <h3>Mad Sultan. In the moment.</h3>
+        <a class="small-link" href="videos/video.mp4" target="_blank" rel="noopener"
+          >Open video &#8599;</a
+        >
+      </div>
+    </article>
+    <div class="archive-heading">
+      <span class="eyebrow">MORE FROM OUR UNIVERSE</span><span>THE YOUTUBE ARCHIVE</span>
     </div>
     <div class="video-grid">
       @for (
@@ -197,13 +179,14 @@
                   [src]="'images/' + video.image"
                   alt="Mad Sultan video still"
                   loading="lazy"
-                /><span class="play-icon">?</span><span class="watch-label">WATCH THE VIDEO ?</span>
+                /><span class="play-icon" aria-hidden="true">&#9654;</span
+                ><span class="watch-label">WATCH THE VIDEO &#8599;</span>
               </button>
             }
           </div>
           <div class="video-caption">
             <h3>{{ video.label }}</h3>
-            <span>FILM {{ video.number }} ?</span>
+            <span>FILM {{ video.number }} &#8599;</span>
           </div>
         </article>
       }
@@ -211,12 +194,20 @@
     <div class="live-note">
       <span>GOOD MUSIC IS BETTER IN THE SAME ROOM.</span
       ><a href="https://www.instagram.com/madsultanband/" target="_blank" rel="noopener noreferrer"
-        >Find our next show on Instagram ?</a
+        >Find our next show on Instagram &#8599;</a
       >
     </div>
   </section>
   <section class="band section" id="band">
-    <div class="band-symbol" aria-hidden="true">?</div>
+    <div class="band-logo">
+      <img
+        src="images/band-art.jpg"
+        alt="Mad Sultan hand-lettered logo and feathered turban emblem"
+        width="1080"
+        height="1080"
+        loading="lazy"
+      />
+    </div>
     <div>
       <span class="eyebrow">03 / THE BAND</span>
       <h2>Old roots.<br />New electricity.</h2>
@@ -224,13 +215,15 @@
         Mad Sultan brings hard rock into the orbit of Anatolian melodies and psychedelia. A meeting
         of familiar roots and untamed sound.
       </p>
-      <p>For the moments on stage, behind the scenes, and everything in between ? come find us.</p>
+      <p>
+        For the moments on stage, behind the scenes, and everything in between &mdash; come find us.
+      </p>
       <a
         class="button dark"
         href="https://www.instagram.com/madsultanband/"
         target="_blank"
         rel="noopener noreferrer"
-        >FOLLOW ON INSTAGRAM ?</a
+        >FOLLOW ON INSTAGRAM &#8599;</a
       >
     </div>
   </section>
@@ -239,16 +232,16 @@
     <h2>Stay in the orbit.</h2>
     <div>
       <a href="https://www.instagram.com/madsultanband/" target="_blank" rel="noopener noreferrer"
-        >INSTAGRAM ?</a
+        >INSTAGRAM &#8599;</a
       ><a href="https://www.youtube.com/@madsultanband" target="_blank" rel="noopener noreferrer"
-        >YOUTUBE ?</a
+        >YOUTUBE &#8599;</a
       ><a href="https://soundcloud.com/mad-sultan-band" target="_blank" rel="noopener noreferrer"
-        >SOUNDCLOUD ?</a
+        >SOUNDCLOUD &#8599;</a
       >
     </div>
   </section>
 </main>
 <footer>
-  <a class="wordmark" href="#">MAD SULTAN ?</a><span>? {{ 2026 }} MAD SULTAN</span
-  ><a href="#">BACK TO THE TOP ?</a>
+  <a class="wordmark" href="#">MAD SULTAN &#10035;</a><span>&copy; {{ 2026 }} MAD SULTAN</span
+  ><a href="#">BACK TO THE TOP &#8593;</a>
 </footer>
